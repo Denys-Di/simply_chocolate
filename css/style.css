@@ -17,6 +17,8 @@ p {
     margin: 0;
 }
 
+
+
 ul,
 ol {
     list-style-type: none;
@@ -260,6 +262,14 @@ img {
     font-size: 18px;
     color: #fff;
     margin-bottom: 18px;
+}
+
+.benefits-line {
+    display: none;
+}
+
+.benefits-line-two {
+    display: none;
 }
 
 .benefits-text {
@@ -561,7 +571,15 @@ img {
     color: #111;
     padding: 12px 28px;
     border: 1px solid #fd9222;
-    border-radius: 100px
+    border-radius: 100px;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), 
+    color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reviews-btn:hover,
+.reviews-btn:focus {
+    background-color: #fd9222;
+    color: #fafafa;
 }
 
 /* Footer */
@@ -672,6 +690,7 @@ footer .container {
 
 .backdrop {
     position: fixed;
+    z-index: 3;
     top: 0;
     left: 0;
     width: 100%;
@@ -753,7 +772,7 @@ footer .container {
 .modal-input {
     border: 1.50px solid rgba(17, 17, 17, 0.05);
     border-radius: 8px;
-    padding: 13px 18px;
+    padding: 13px 45px;
     width: 263px;
     height: 45px;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
@@ -806,15 +825,16 @@ footer .container {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* .icon-check {
+    fill: #fff;
+} */
+
 .cub-check {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.33333;
     letter-spacing: -0.02em;
     color: rgba(64, 64, 64, 0.6);
-}
-
-.icon-check {
 }
 
 .modal-link {
@@ -833,6 +853,12 @@ footer .container {
     font-weight: 600;
     font-size: 14px;
     color: #fff;
+}
+
+.modal-check:checked+.modal-label .cub {
+    background-color: #fd9222;
+    border: none;
+    /* fill: #F4F4FD; */
 }
 
 /* Mobile-menu */
@@ -1081,7 +1107,7 @@ footer .container {
         font-size: 24px;
         margin: 0;
         padding: 0 38px;
-        /* margin: 0 38px 28px 38px; */
+        
         
     }
     
@@ -1147,7 +1173,7 @@ footer .container {
     }
 
     .reviews-card-box {
-        z-index: 999;
+        z-index: 2;
     }
 
     .reviews-text-box {
@@ -1213,6 +1239,191 @@ footer .container {
         justify-content: space-between;
         align-items: center;
     }
+
+    .modal {
+        width: 517px;
+        padding: 40px;
+        
+    }
+
+    .close-backdrop-btn {
+        top: 31px;
+        right: 31px;
+    }
+
+    .title-modal {
+        font-size: 24px;
+        max-width: 298px;
+        max-height: 56px;
+        margin-bottom: 40px;
+    }
+
+    .out {
+        display: none;
+    }
+
+    .modal-input {
+        width: 437px;
+        height: 68px;
+    }
+
+    .modal-input {
+        padding: 22px 64px;
+    }
+
+    .icon-modal {
+        width: 24px;
+        height: 24px;
+    }
+
+    .modal-textarea {
+        width: 437px;
+        min-height: 137px;
+    }
+
+    .modal-label {
+        margin-bottom: 40px;
+    }
+
+    .send-btn {
+        width: 117px;
+        height: 45px;
+
+    }
 }
 
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px) {
+
+    .container {
+            max-width: 1200px;
+            padding: 0 32px;
+    }
+
+     .container-hero {
+        background-image: url(../image/hero_desktop_1x-min.jpg);
+        width: 1136px;
+        height: 600px;
+    }
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .bloc_a {
+                background-image:
+                url('../image/hero_desktop_2x-min.jpg');
+            }
+    
+    }
+
+    .logo-title {
+        font-size: 18px;
+    }
+    
+    .not-link {
+        display: none;
+    }
+
+    .header-link-box {
+        gap: 90px;
+    }
+
+    .hero-title {
+        padding-top: 381px;
+    }
+
+    .container-benefits {
+        padding: 50px;
+        margin-bottom: 100px;
+    }
+
+    .benefits-list {
+        gap: 70px;
+        flex-wrap: nowrap;
+    }
+
+    .benefits-line-box {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .container-card {
+        margin-bottom: 100px;
+    }
+
+    .card-link {
+        width: 270px;
+    }
+
+    .card-link-two {
+        width: 270px;
+    }
+
+    .card-link-three {
+        width: 270px;
+    }
+
+    .card-list {
+        flex-wrap: nowrap;
+        gap: 19px;
+    }
+
+    .container-taste {
+        margin-bottom: 100px;
+    }
+
+    .box-taste {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .made-image-box {
+        width: 600px;
+        height: 400px;
+    }
+
+    .made-text-box {
+        margin-bottom: 0;
+        max-width: 516px;
+        max-height: 400px;
+    }
+
+    .made-list-text {
+        width: 436px;
+    }
+
+    .review-list {
+        margin-bottom: 49px;
+        gap: 28px;
+    }
+
+    .reviews-card-3 {
+        display: block;
+    }
+
+    .reviews-btn-box {
+        margin-bottom: 100px;
+    }
+
+    .container-footer h2 {
+        font-size: 28px;
+    }
+
+    .footer-btn {
+        padding: 17px 32px;
+        width: 137px;
+        height: 52px;
+    }
+
+    .footer-email-inp {
+        min-width: 313px;
+        min-height: 52px;
+    }
+
+    .footer-line {
+        width: 100%;
+    }
+
+    
+}
